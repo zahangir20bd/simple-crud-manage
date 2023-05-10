@@ -81,6 +81,7 @@ async function run() {
       console.log("Please delete from database", id);
       const query = { _id: new ObjectId(id) };
       const result = await userCollection.deleteOne(query);
+
       res.send(result);
     });
 
